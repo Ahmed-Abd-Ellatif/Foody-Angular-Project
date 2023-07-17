@@ -1,0 +1,36 @@
+@import "../../../assets/styles/common.scss";
+.visit-our-firm {
+  background-color: $green-color;
+  background-image: url(../../../assets/images/bg-icon.png);
+  background-size: cover;
+  padding: 100px 0px;
+  color: $white-color;
+  .visit {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    h2 {
+      font-size: clamp(1.5rem, 4vw, 3rem);
+    }
+    p {
+      font-family: $second-font;
+    }
+    button {
+      background-color: $orange-color;
+      color: $white-color;
+      border: none;
+      font-family: $second-font;
+      transition: all 0.35s;
+      &:hover {
+        background-color: $orange-color-hover;
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .visit {
+    flex-direction: column;
+  }
+}

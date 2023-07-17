@@ -1,0 +1,115 @@
+@import "../../../assets/styles/common.scss";
+
+.our-products {
+  padding: 100px 0;
+  h2 {
+    font-size: clamp(24px, 4vw, 48px);
+    font-weight: 700;
+    position: relative;
+    padding: 20px 0;
+    &::before {
+      @include before-line;
+      top: 0;
+      left: 0;
+      transform: unset;
+    }
+    &::after {
+      @include after-line;
+      top: 10;
+      left: 0;
+      transform: unset;
+    }
+  }
+  p {
+    color: $gray-color;
+    margin-bottom: 32px;
+  }
+  .filters {
+    margin-bottom: 32px;
+    button {
+      padding: 7px 15px;
+      margin-right: 8px;
+      border: 1px solid $green-color;
+      background-color: transparent;
+      &.active,
+      &:hover {
+        background-color: $green-color;
+        color: $white-color;
+        font-family: $second-font;
+      }
+    }
+  }
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+
+    .product-card {
+      width: 300px;
+      text-align: center;
+      background-color: $white-color;
+      box-shadow: 0 0 45px rgba(0, 0, 0, 0.07);
+      position: relative;
+
+      .new {
+        background-color: $orange-color;
+        color: $white-color;
+        font-family: $second-font;
+        position: absolute;
+        padding: 7px 15px;
+        top: 20px;
+        left: 20px;
+      }
+
+      .card-img {
+        margin-bottom: 20px;
+        overflow: hidden;
+        img {
+          width: 100%;
+          transition: all 0.5s;
+        }
+      }
+      h3 {
+        transition: all 0.35s;
+        &:hover {
+          color: $green-color;
+        }
+      }
+      p {
+        color: $green-color;
+        span {
+          color: $gray-color;
+          text-decoration: line-through;
+          margin-left: 16px;
+        }
+      }
+      .btns {
+        display: flex;
+        justify-content: space-between;
+        button {
+          background-color: transparent;
+          border: none;
+          color: $gray-color;
+          transition: all 0.35s;
+          font-family: $second-font;
+
+          img {
+            width: 20px;
+            margin-right: 8px;
+          }
+          &:hover {
+            color: $green-color;
+          }
+        }
+      }
+      &:hover {
+        .card-img {
+          img {
+            transform: scale(1.1);
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,105 @@
+@import "../../../assets/styles/common.scss";
+
+footer {
+  background-color: $black-color;
+  padding: 100px 0px 0px;
+
+  .first {
+    a {
+      color: $green-color;
+      font-size: 40px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      span {
+        color: $orange-color;
+      }
+    }
+    p {
+      color: $gray-color;
+      font-family: $second-font;
+    }
+
+    .icons {
+      display: flex;
+      .icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: 2px solid #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        margin-right: 8px;
+        transition: all 0.35s;
+        a {
+          margin-bottom: 0px;
+          font-size: 20px;
+          color: #fff;
+          img {
+            width: 20px;
+          }
+        }
+        &:hover {
+          transform: translateY(-3px);
+          background-color: $orange-color;
+        }
+      }
+    }
+  }
+  .second,
+  .third,
+  .fourth {
+    h5 {
+      color: $white-color;
+      font-size: 24px;
+      font-weight: 600;
+      margin-bottom: 24px;
+    }
+    P {
+      color: $gray-color;
+      font-family: $second-font;
+      cursor: pointer;
+      img {
+        width: 20px;
+        margin-right: 8px;
+      }
+    }
+  }
+  .fourth {
+    .input-field {
+      border: 1px solid $white-color;
+      padding: 10px;
+      display: flex;
+      justify-content: space-between;
+      font-family: $second-font;
+      input {
+        border: none;
+        outline: none;
+        background-color: transparent;
+      }
+      button {
+        background-color: $green-color;
+        color: $white-color;
+        padding: 10px;
+        border: none;
+        transition: all 0.35s;
+        &:hover {
+          background-color: $green-color-hover;
+        }
+      }
+    }
+  }
+
+  .down-said {
+    border-top: 1px solid $gray-color;
+    color: $white-color;
+    padding: 30px 0px;
+
+    text-align: center;
+    p {
+      font-family: $second-font;
+      margin-bottom: 0px;
+    }
+  }
+}

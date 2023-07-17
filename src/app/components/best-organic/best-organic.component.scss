@@ -1,0 +1,41 @@
+@import "../../../assets/styles/common.scss";
+.best-organic {
+  padding: 100px 0px;
+  .left-side {
+    position: relative;
+    img {
+      width: 100%;
+    }
+  }
+
+  //   ======================
+  .right-side {
+    h2 {
+      font-size: clamp(2rem, 4vw, 4rem);
+      font-weight: 700;
+      color: $black-color;
+      margin-bottom: 24px;
+    }
+    p {
+      font-family: $second-font;
+      font-weight: 400;
+      color: $gray-color;
+      img {
+        width: 20px;
+        margin-right: 8px;
+      }
+    }
+    button {
+      background-color: $green-color;
+      color: $white-color;
+      padding: 16px 32px;
+      border-radius: 30px;
+      border: none;
+      font-family: $second-font;
+      transition: all 0.35s;
+      &:hover {
+        background-color: $green-color-hover;
+      }
+    }
+  }
+}

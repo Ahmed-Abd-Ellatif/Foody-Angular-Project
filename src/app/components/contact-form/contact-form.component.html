@@ -1,0 +1,121 @@
+<section class="contact-form">
+  <div class="container">
+    <h2>Contact Us</h2>
+    <p class="prag">
+      Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo
+      sed rebum vero dolor duo.
+    </p>
+    <div class="row d-flex justify-content-between">
+      <div class="col-lg-5 left-side">
+        <div class="title">
+          <h3>Call Us</h3>
+          <p>
+            <img src="../../../assets/images/icons/phonew.png" /> +012 345 67890
+          </p>
+        </div>
+        <div class="title">
+          <h3>Email Us</h3>
+          <p>
+            <img
+              src="../../../assets/images/icons/envelopew.png"
+            />info@example.com
+          </p>
+        </div>
+        <div class="title">
+          <h3>Office Address</h3>
+          <p>
+            <img src="../../../assets/images/icons/locationw.png" /> 123 Street,
+            New York, USA
+          </p>
+        </div>
+        <div>
+          <h3>Follow Us</h3>
+          <div class="icons">
+            <div class="icon">
+              <img src="../../../assets/images/icons/facebook.svg" />
+            </div>
+            <div class="icon">
+              <img src="../../../assets/images/icons/youtube.svg" />
+            </div>
+            <div class="icon">
+              <img src="../../../assets/images/icons/linkedin.svg" />
+            </div>
+            <div class="icon">
+              <img src="../../../assets/images/icons/twitter.svg" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- ============================= -->
+      <!-- ============================= -->
+      <div class="col-lg-7 right-side">
+        <div>
+          <p>
+            The contact form is currently inactive. Get a functional and working
+            contact form with Ajax & PHP in a few minutes. Just copy and paste
+            the files, add a little code and you're done.
+            <span>Download Now.</span>
+          </p>
+        </div>
+        <form [formGroup]="formValidation">
+          <div class="row mb-5">
+            <div class="col-lg-6">
+              <input
+                type="text"
+                placeholder="Your Name"
+                formControlName="name"
+              />
+              <small class="text-danger" *ngIf="name?.invalid && name?.touched"
+                >Name is Required*</small
+              >
+            </div>
+            <div class="col-lg-6">
+              <input
+                type="email"
+                placeholder="Your Email"
+                formControlName="email"
+              />
+              <div *ngIf="email?.invalid && email?.touched">
+                <small class="text-danger" *ngIf="email?.errors?.['required']"
+                  >Email is Required*</small
+                >
+                <small class="text-danger" *ngIf="email?.errors?.['email']"
+                  >Email is not correct*</small
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-12 mb-5">
+            <input
+              type="text"
+              placeholder="Subject"
+              formControlName="subject"
+            />
+            <small
+              class="text-danger"
+              *ngIf="subject?.invalid && subject?.touched"
+              >Subject is Required*</small
+            >
+          </div>
+          <div class="col-12">
+            <textarea
+              formControlName="message"
+              placeholder="Enter Your Message"
+            ></textarea>
+            <small
+              class="text-danger"
+              *ngIf="message?.invalid && message?.touched"
+              >Message is Required*</small
+            >
+          </div>
+          <button
+            class="rounded-pill py-3 px-5"
+            [disabled]="formValidation.invalid"
+          >
+            Send Message
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

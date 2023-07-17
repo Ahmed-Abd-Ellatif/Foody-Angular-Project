@@ -1,0 +1,21 @@
+@import "../../../assets/styles/common.scss";
+.title-of-com {
+  background-image: url(../../../assets/images/carousel-1.jpg);
+  background-size: cover;
+  height: 60vh;
+  display: flex;
+  align-items: end;
+  padding: 100px 0;
+  h2 {
+    font-size: clamp(32px, 4vw, 64px);
+    font-weight: 700;
+  }
+  p {
+    font-family: $second-font;
+    color: $gray-color;
+    span {
+      font-family: $second-font;
+      color: $black-color;
+    }
+  }
+}

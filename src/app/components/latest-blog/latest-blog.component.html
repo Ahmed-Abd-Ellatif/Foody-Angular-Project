@@ -1,0 +1,25 @@
+<section class="latest-blog">
+  <div class="container">
+    <h2>Latest Blog</h2>
+    <p>
+      Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo
+      sed rebum vero dolor duo.
+    </p>
+    <div class="cards">
+      <div class="blog-card" *ngFor="let blog of blogs">
+        <div class="card-img">
+          <img [src]="blog.img" />
+        </div>
+        <div class="card-body">
+          <h3>{{ blog.title }}</h3>
+          <div class="down">
+            <p><img src="../../../assets/images/icons/user.png" /> Admin</p>
+            <p>
+              <img src="../../../assets/images/icons/today.png" />01 Jan, 2045
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

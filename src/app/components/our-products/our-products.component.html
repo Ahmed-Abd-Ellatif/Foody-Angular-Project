@@ -1,0 +1,52 @@
+<section class="our-products">
+  <div class="container">
+    <h2>Our Products</h2>
+    <p>
+      Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo
+      sed rebum vero dolor duo.
+    </p>
+    <div class="filters">
+      <button
+        [ngClass]="isActive === 'all' ? 'active' : ''"
+        (click)="onFilter('all')"
+      >
+        All
+      </button>
+      <button
+        [ngClass]="isActive === 'vegetable' ? 'active' : ''"
+        (click)="onFilter('vegetable')"
+      >
+        Vegetable
+      </button>
+      <button
+        [ngClass]="isActive === 'fruit' ? 'active' : ''"
+        (click)="onFilter('fruit')"
+      >
+        Fruits
+      </button>
+    </div>
+    <div class="cards">
+      <div class="product-card" *ngFor="let product of productFilter">
+        <div class="new" *ngIf="product.new">New</div>
+        <div class="card-img">
+          <img [src]="product.img" />
+        </div>
+        <div class="card-body">
+          <h3>{{ product.title }}</h3>
+          <p>
+            {{ product.price | currency }}
+            <span>{{ product.oldPrice | currency }}</span>
+          </p>
+          <div class="btns">
+            <button (click)="onViewDetails(product.id)">
+              <img src="../../../assets/images/icons/eye.png" /> View details
+            </button>
+            <button>
+              <img src="../../../assets/images/icons/bag.png" />Add to cart
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

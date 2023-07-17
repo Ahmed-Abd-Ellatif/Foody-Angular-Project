@@ -1,0 +1,25 @@
+<app-title-of-com [title]="product[0].title"></app-title-of-com>
+
+<section class="product">
+  <div class="container">
+    <div class="product-card" *ngFor="let p of product">
+      <div>
+        <img [src]="p.img" />
+      </div>
+      <div>
+        <h3>ID : {{ p.id }}</h3>
+        <h4>Title : {{ p.title }}</h4>
+        <p>Price : {{ p.price | currency }}</p>
+        <span>Old Price : {{ p.oldPrice | currency }}</span>
+        <div>
+          <button
+            [routerLink]="['/products']"
+            class="rounded-pill py-3 px-5 mt-3"
+          >
+            Back
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

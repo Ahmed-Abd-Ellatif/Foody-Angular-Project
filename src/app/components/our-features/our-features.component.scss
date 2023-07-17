@@ -1,0 +1,56 @@
+@import "../../../assets/styles/common.scss";
+.our-features {
+  background-image: url(../../../assets/images/bg-icon.png);
+  background-size: cover;
+  background-color: #f7f8fc;
+  padding: 100px 0;
+  text-align: center;
+  h2 {
+    padding: 20px 0px;
+    font-size: clamp(2rem, 4vw, 4rem);
+    position: relative;
+    &::before {
+      @include before-line;
+    }
+    &::after {
+      @include after-line;
+    }
+  }
+  p {
+    font-family: $second-font;
+    color: $gray-color;
+    margin-bottom: 48px;
+  }
+  .x {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    .feature {
+      background-color: $white-color;
+      padding: 40px 20px;
+      width: 400px;
+      img {
+        margin-bottom: 24px;
+      }
+      h4 {
+        font-size: clamp(16px, 4vw, 24px);
+        font-weight: 600;
+        margin-bottom: 24px;
+      }
+      p {
+        margin-bottom: 16px;
+      }
+      button {
+        border: none;
+        background-color: $green-color;
+        color: $white-color;
+        transition: all 0.35s;
+        font-family: $second-font;
+        &:hover {
+          background-color: $green-color-hover;
+        }
+      }
+    }
+  }
+}

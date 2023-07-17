@@ -1,0 +1,110 @@
+@import "../../../assets/styles/common.scss";
+
+.contact-form {
+  padding: 100px 0;
+  h2 {
+    font-size: clamp(24px, 4vw, 48px);
+    font-weight: 700;
+    text-align: center;
+    position: relative;
+    padding: 20px 0;
+    &::before {
+      @include before-line;
+    }
+    &::after {
+      @include after-line;
+    }
+  }
+  .prag {
+    color: $gray-color;
+    text-align: center;
+    margin-bottom: 32px;
+  }
+  .left-side {
+    background-color: $green-color;
+    padding: 40px;
+    color: $white-color;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    h3 {
+      font-size: 20px;
+      font-weight: 600;
+    }
+    .title {
+      margin-bottom: 32px;
+
+      p {
+        font-family: $second-font;
+        img {
+          width: 20px;
+          margin-right: 8px;
+        }
+      }
+    }
+    .icons {
+      display: flex;
+
+      .icon {
+        width: 40px;
+        height: 40px;
+        border: 2px solid $white-color;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 8px;
+        cursor: pointer;
+        transition: all 0.35s;
+        &:hover {
+          transform: translateY(-3px);
+          background-color: $orange-color;
+        }
+        img {
+          width: 20px;
+        }
+      }
+    }
+  }
+  .right-side {
+    font-family: $second-font;
+    p {
+      color: $gray-color;
+      margin-bottom: 32px;
+      span {
+        color: $green-color;
+      }
+    }
+    input {
+      width: 100%;
+      padding: 15px;
+
+      &:focus {
+        outline: 3px solid $green-color-hover;
+        border: none;
+      }
+    }
+    textarea {
+      width: 100%;
+      padding: 15px;
+      height: 150px;
+      &:focus {
+        outline: 3px solid $green-color-hover;
+        border: none;
+      }
+    }
+    button {
+      border: none;
+      background-color: $green-color;
+      color: $white-color;
+      transition: all 0.35s;
+      &:hover {
+        background-color: $green-color-hover;
+      }
+      &:disabled {
+        background-color: $gray-color;
+        cursor: not-allowed;
+      }
+    }
+  }
+}

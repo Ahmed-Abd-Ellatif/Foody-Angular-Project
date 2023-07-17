@@ -1,0 +1,19 @@
+<section class="our-features">
+  <div class="container">
+    <h2>Our Features</h2>
+    <p>
+      Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo
+      sed rebum vero dolor duo.
+    </p>
+    <div class="row x">
+      <div class="feature" *ngFor="let feature of features">
+        <img [src]="feature.img" />
+        <h4>{{ feature.title }}</h4>
+        <p>
+          {{ feature.desc }}
+        </p>
+        <button class="rounded-pill py-3 px-5 ms-3">Read More</button>
+      </div>
+    </div>
+  </div>
+</section>

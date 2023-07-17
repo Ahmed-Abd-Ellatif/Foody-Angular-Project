@@ -1,0 +1,30 @@
+$green-color: #3cb815;
+$green-color-hover: #59c338;
+$orange-color: #f65005;
+$orange-color-hover: #f76a2b;
+$gray-color: #555555;
+$black-color: #111111;
+$white-color: #ffffff;
+
+$second-font: "Open Sans", sans-serif;
+
+@mixin before-line {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  width: 60px;
+  height: 2px;
+  background-color: $green-color;
+  transform: translateX(-50%);
+}
+@mixin after-line {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  width: 90px;
+  height: 2px;
+  background-color: $orange-color;
+  transform: translateX(-50%);
+}
